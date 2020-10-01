@@ -39,7 +39,7 @@ class BST(object):
 		 		return False
 
 	def traverse_tree(self):
-		  ## INORDER
+		while :
 
 
 
