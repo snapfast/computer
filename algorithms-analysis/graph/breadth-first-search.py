@@ -48,11 +48,12 @@ def breadth_first_search(graph, start_point):
 
 
 g = {
-	1: [2, 3],
-	2: [1],
-	3: [1, 4],
-	4: [3]
+	1: [2],
+	2: [1, 3],
+	3: [2, 4],
+	4: [3, 5],
+	5: [4]
 }
 print(type(g))
-breadth_first_search(g, 4)
+breadth_first_search(g, 1)
 
