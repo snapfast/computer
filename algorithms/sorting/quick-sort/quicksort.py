@@ -31,33 +31,48 @@ def partition(A, start, end):
     """
     create partition from the 
     """
-    mid = ( start + end ) / 2
-    return mid
+    p1 = ( start + end ) // 2
+    pivot =  A[p1]
+
+    while True:
+
+        print(A, start, end, pivot)
+
+        # move until larger than pivot
+        while A[start] < pivot:
+            start = start + 1
+
+        # move until smaller than pivot
+        while A[end] > pivot:
+            end = end - 1
+        
+        if start >= end:
+            return end
+        
+        A[start], A[end] = A[end], A[start]
+
+        # add +1 to start, -1 to end, after SWAP
+        start += 1
+        end -= 1
 
 
 def quicksort(A, first, last):
-    pivot = partition(A, start, end)
-    # partition 1
-    start = first
-    end = last
-    while start == pivot and end == pivot:
-        if A[start] > A[end]:
-            A[start], A[end] = A[end], A[start]
-            start = start + 1
-            end = end - 1
-        elif start != pivot:
-            end = end - 1
-        elif end != pivot:
-            start = start + 1
-    quicksort(A, first, pivot-1)
-    quicksort(A, pivot + 1, last)
+    if first < last:    
+        p = partition(A, first, last)
+
+        print(A, first, last, p)
+
+        quicksort(A, first, p)
+        quicksort(A, p+1, last)
+        return(A)
 
 
+A = [9, 4, 8, 7, 2, 5, 1, 6]
 
 
+yeah = quicksort(A, 0, len(A)-1)
 
-
-
+print(yeah)
 
 
 
