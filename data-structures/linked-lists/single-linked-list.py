@@ -25,6 +25,8 @@ class LinkedList():
 			self.head = new_node
 			self.head.next = current
 
+	def remove(self):
+		pass
 
 	def reverse_a_linkedlist(self):
 		dummy = None # create new Dummy Node
