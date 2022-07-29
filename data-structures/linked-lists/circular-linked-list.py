@@ -1,4 +1,6 @@
-## we know what circular linked list is, now we implement in python.
+"""
+this is doubly-circular linked list is, now we implement in python.
+"""
 
 
 class Node():
@@ -6,6 +8,7 @@ class Node():
         self.value = value
         self.prev = None
         self.nxt = None
+
 
 class CircularLinkedList:
     """CircularLinkedList.
@@ -63,9 +66,3 @@ if __name__ == "__main__":
     c.insert(1)
     c.insert(0)
     c.traverse()
-
-
-
-
-
-
