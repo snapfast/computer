@@ -18,10 +18,10 @@ if 4 is entrypoint, output will be 4, 3, 1, 2
 # BFS uses a Queue
 
 
-def breadth_first_search(graph, start_point):
+def depth_first_search(graph, start_point):
     '''
     graph: dict
-    start_point: nodes to start from
+    start_point: node to start from
     nodes: total number of nodes
     '''
     visited_nodes = []
@@ -34,7 +34,6 @@ def breadth_first_search(graph, start_point):
     q.extend(graph[start_point])
     visited_nodes.extend(graph[start_point])
 
-    print(visited_nodes, q)
     print(visited_nodes, q)
     while q:
         print(visited_nodes, q)
@@ -54,4 +53,4 @@ g = {
     5: [4]
 }
 print(type(g))
-breadth_first_search(g, 3)
+depth_first_search(g, 3)
