@@ -1,7 +1,7 @@
 
 
 class Node():
-    """docstring for Node"""
+    """Node of Linked List"""
 
     def __init__(self, value):
         super(Node, self).__init__()
@@ -10,11 +10,11 @@ class Node():
 
 
 class LinkedList():
-    """docstring for LinkedList"""
+    """actual Linked List"""
 
-    def __init__(self, arg):
+    def __init__(self, value):
         super(LinkedList, self).__init__()
-        self.head = None
+        self.head = Node(value)
 
     def insert(self, value):
         if self.head is None:
@@ -50,14 +50,26 @@ class LinkedList():
             current = current.next
         print("----")
 
+    def remove_a_duplicate_nobuffer(self):
+        p1 = self.head
+        p2 = self.head
+        while p1 is not None:
+            while p2 is not None:
+                if p1.value == p2.value and p1 != p2:
+                    print("duplicate here")
+                print(p1.value, p2.value)
+                p2 = p2.next
+            p1 = p1.next
+
 
 c = LinkedList(2)
+c.insert(1)
 c.insert(3)
 c.insert(4)
-c.insert(5)
-c.insert(6)
+c.insert(2)
+# c.traverse()
+# c.remove()
+# c.reverse_a_linkedlist()
 c.traverse()
-c.remove()
-c.reverse_a_linkedlist()
-c.traverse()
+c.remove_a_duplicate_nobuffer()
 
