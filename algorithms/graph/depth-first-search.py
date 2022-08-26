@@ -14,8 +14,9 @@ if 4 is entrypoint, output will be 4, 3, 1, 2
 
 '''
 
-# this bfs algorithm is for connected components only
-# BFS uses a Queue
+# this dfs algorithm is for connected components only
+# dfs uses a Stack, or
+# Recursion (which is a form of Stack)
 
 
 def depth_first_search(graph, start_point):
@@ -27,22 +28,7 @@ def depth_first_search(graph, start_point):
     visited_nodes = []
     q = []
 
-    visited_nodes.append(start_point)
-    print(visited_nodes, q)
 
-    # add points to q
-    q.extend(graph[start_point])
-    visited_nodes.extend(graph[start_point])
-
-    print(visited_nodes, q)
-    while q:
-        print(visited_nodes, q)
-        n = q.pop(0)
-        for i in graph[n]:
-            if i not in visited_nodes:
-                visited_nodes.append(i)
-                q.append(i)
-    print(visited_nodes)
 
 
 g = {

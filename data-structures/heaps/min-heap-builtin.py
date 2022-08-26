@@ -15,7 +15,7 @@ class MinHeap():
         heapq.heappop(self.heap)
 
     def find_min(self):
-        heapq.nsmallest()
+        return heapq.nsmallest(3, self.heap)
 
     def delete_min(self):
         pass
@@ -30,10 +30,10 @@ class MinHeap():
 
 mh = MinHeap()
 mh.insert(4)
+print(mh.heap, mh.find_min())
 mh.insert(5)
+print(mh.heap, mh.find_min())
 mh.insert(63)
 mh.insert(45)
 mh.insert(22)
-mh.insert(92)
-mh.insert(1)
-print(mh.heap)
+print(mh.heap, mh.find_min())

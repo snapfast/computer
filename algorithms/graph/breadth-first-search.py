@@ -35,7 +35,6 @@ def breadth_first_search(graph, start_point):
     visited_nodes.extend(graph[start_point])
 
     print(visited_nodes, q)
-    print(visited_nodes, q)
     while q:
         print(visited_nodes, q)
         n = q.pop(0)
