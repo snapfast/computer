@@ -3,6 +3,6 @@ terminal:
   image: golang:latest
   before_script:
     - apt update
-  script: sleep 20; cd $WORKDIR
+  script: sleep 60
   variables:
     GOP_ENV: "test"
