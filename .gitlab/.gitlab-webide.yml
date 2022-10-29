@@ -3,6 +3,6 @@ terminal:
   image: golang:latest
   before_script:
     - apk update
-  script: sleep 60
+  script: sleep 20
   variables:
     GOP_ENV: "test"
