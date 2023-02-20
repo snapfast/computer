@@ -15,8 +15,8 @@ if 4 is entrypoint, output will be 4, 3, 1, 2
 '''
 
 # this dfs algorithm is for connected components only
-# dfs uses a Stack, or
-# Recursion (which is a form of Stack)
+# dfs uses recursion (which is a form of Stack)
+# dfs with stack only is available in separate file.
 
 
 def depth_first_search(graph, start_point):
