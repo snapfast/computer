@@ -2,7 +2,6 @@
 '''
 
 graph:
-
 1: {2,3}
 2: {1}
 3: {1, 4}
@@ -11,13 +10,10 @@ graph:
 if 1 is entrypoint, output will be: 1, 2, 3, 4
 if 4 is entrypoint, output will be 4, 3, 1, 2
 
-
 '''
 
 # this dfs algorithm is for connected components only
-# dfs uses recursion (which is a form of Stack)
 # dfs with stack only is available in separate file.
-
 
 def depth_first_search(graph, start_point):
     '''
@@ -26,9 +22,21 @@ def depth_first_search(graph, start_point):
     nodes: total number of nodes
     '''
     visited_nodes = []
-    q = []
+    stack = []
 
+    stack.append(start_point)
 
+    while stack:
+        # pop from the stack
+        top_of_stack_element = stack.pop(-1)
+
+        if top_of_stack_element not in visited_nodes:
+            print(element)
+            visited_nodes.append(top_of_stack_element)
+
+        for n in g[top_of_stack_element]:
+            if n not in visited_nodes:
+                stack.append(n)
 
 
 g = {
