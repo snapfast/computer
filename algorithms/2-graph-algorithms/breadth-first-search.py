@@ -37,14 +37,15 @@ def breadth_first_search(graph, start_point):
     # Return the list of visited nodes
     return visited_nodes
 
-# Define a graph as an adjacency list
-g = {
-    1: [2],
-    2: [1, 3],
-    3: [2, 4],
-    4: [3, 5],
-    5: [4]
-}
+if __name__ == "__main__":
+    # Define a graph as an adjacency list
+    g = {
+        1: [2],
+        2: [1, 3],
+        3: [2, 4],
+        4: [3, 5],
+        5: [4]
+    }
 
-# Perform a breadth-first search on the graph starting from node 3
-print(breadth_first_search(g, 3))
+    # Perform a breadth-first search on the graph starting from node 3
+    print(breadth_first_search(g, 3))
