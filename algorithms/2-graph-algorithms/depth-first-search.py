@@ -31,7 +31,7 @@ def depth_first_search(graph, start_point):
         top_of_stack_element = stack.pop(-1)
 
         if top_of_stack_element not in visited_nodes:
-            print(element)
+            print(top_of_stack_element)
             visited_nodes.append(top_of_stack_element)
 
         for n in g[top_of_stack_element]:
