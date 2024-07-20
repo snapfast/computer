@@ -1,6 +1,6 @@
-from typing import Dict, List
+# dfs running using stack (list)
 
-def depth_first_search(graph: Dict[int, List[int]], start_point: int) -> None:
+def depth_first_search(graph, start_point: int) -> None:
     """
     Perform a depth-first search on a graph.
 
