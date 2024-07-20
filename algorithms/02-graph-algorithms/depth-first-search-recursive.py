@@ -1,14 +1,18 @@
 # dfs uses recursion (which is a form of Stack)
+# dfs using recursion
 
-def depth_first_search(graph, start_point):
-    '''
-    graph: dict
-    start_point: node to start from
-    nodes: total number of nodes
-    '''
-    visited_nodes = []
 
-    # recursion baby
+def depth_first_search_recursion(graph, start_point, visited_nodes):
+    if start_point not in visited_nodes:
+        visited_nodes.append(start_point)
+
+        if start_point not in graph:
+            return visited_nodes
+
+        # recursion
+        for neighbour in graph[start_point]:
+            depth_first_search_recursion(graph, neighbour, visited_nodes)
+    return visited_nodes
 
 
 g = {
@@ -18,7 +22,5 @@ g = {
     4: [3, 4, 5],
     5: [4]
 }
-print(type(g))
-depth_first_search(g, 3)
-
-
+visited_nodes = []
+print(depth_first_search_recursion(g, 2, visited_nodes))

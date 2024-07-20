@@ -2,7 +2,7 @@
 
 def depth_first_search(graph, start_point: int) -> None:
     """
-    Perform a depth-first search on a graph.
+    Perform a depth-first search on a graph. Uses Stack - First In Last Out
 
     Parameters:
     graph (dict): The graph represented as an adjacency list.

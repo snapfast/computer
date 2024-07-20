@@ -1,8 +1,10 @@
+# bfs running using queue FIFO
+
 from collections import deque
 
 def breadth_first_search(graph, start_point):
     """
-    Perform a breadth-first search on a graph.
+    Perform a breadth-first search on a graph. Uses Queue - First In First Out
 
     Parameters:
     graph (dict): The graph represented as an adjacency list.
