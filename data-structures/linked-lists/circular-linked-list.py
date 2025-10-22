@@ -29,7 +29,7 @@ class CircularLinkedList:
         else:
             new_node = Node(value)
 
-            """ if there is exists a preivous node to head,
+            """ if there is exists a previous node to head,
             we take that last_node, add new_node to next of last.
             and add last_node to the previous of new_node.
             """
@@ -49,20 +49,31 @@ class CircularLinkedList:
             # linking new node to head, will be done in all cases.
             self.head.prev = new_node
             new_node.nxt = self.head
+        
+    def delete(self, value):
+        current = self.head
+        while (current.value != value and current == self.head):
+            current = current.nxt
+        current.prev.nxt = current.nxt
+        current.nxt.prev = current.prev
 
     def traverse(self):
         current = self.head
-        print(current.value)
+        print(current.value, end="->")
         while current.nxt != self.head:
-            print(str(current.nxt.value), ' ')
+            print(str(current.nxt.value), end="->")
             current = current.nxt
+        print("\n")
 
 
 if __name__ == "__main__":
     c = CircularLinkedList()
     c.insert(9)
-    print('comes here')
     c.insert(7)
     c.insert(1)
     c.insert(0)
+    c.traverse()
+    c.delete(7)
+    c.delete(1)
+    c.delete(4)
     c.traverse()

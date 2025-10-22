@@ -1,5 +1,4 @@
 # dfs uses recursion (which is a form of Stack)
-# dfs using recursion
 
 
 def depth_first_search_recursion(graph, start_point, visited_nodes):
