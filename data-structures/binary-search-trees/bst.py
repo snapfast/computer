@@ -55,6 +55,21 @@ class BST:
     def insert_node_rec(self, new_value):
         self.root = self._insert_rec(self.root, new_value)
         return True
+    
+	# delete the node - recursive version - does not work at the moment
+    def delete(self, delete_value):
+        current = self.root
+        while delete_value != current.value:
+            print(current.value)
+            if delete_value < current.value:
+                current = current.left
+            else:
+                current = current.right
+        print(current.value, current.left, current.right)
+        if current.right != None:
+            current = current.right
+        else:
+            current = current.left
 
     # in-order traversal
     def in_order_traversal(self, start):
@@ -95,6 +110,9 @@ bst.insert_node_rec(70)
 bst.insert_node(50)
 bst.insert_node(20)
 bst.insert_node(40)
+bst.print_in_order()
+bst.print_pre_order()
+bst.delete(50)
 bst.print_in_order()
 bst.print_pre_order()
 # Output will be: 2, 3, 4, 5
